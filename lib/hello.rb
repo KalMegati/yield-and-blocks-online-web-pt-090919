@@ -16,5 +16,7 @@ cattos = ["Tim", "Tom", "Jim"]
 hello_t(cattos) do |name|
   if name.start_with?("T")
     puts "Hi, #{name}"
+  else
+    puts "Oh, #{name}"
   end
 end
