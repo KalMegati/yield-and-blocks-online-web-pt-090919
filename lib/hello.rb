@@ -1,14 +1,19 @@
 def hello_t(array)
-#  array.length.times { |index| yield array[index] }
-  i = 0
+  if block_given?
+    i = 0
  
-  while i < array.length
-    yield array[i]
-    i = i + 1
-  end
+    while i < array.length
+      yield array[i]
+      i = i + 1
+    end
   
-  array
+    array
+  else
+    puts "Hey! No block was given!"
+  end
 end
+
+# array.length.times { |index| yield array[index] }
 
 # call your method here!
 
